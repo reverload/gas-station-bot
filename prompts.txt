@@ -1,0 +1,48 @@
+Create a Python Telegram bot that integrates with the Spanish public endpoint for gas stations. The bot should respond to a command (e.g., /lowestprice) followed by a user's location (latitude and longitude). Upon receiving the command, the bot will:
+
+    API Integration:
+        Make an HTTP GET request to the Spanish public endpoint for gas stations, passing the user's location to retrieve data on nearby gas stations. Parse the JSON response to extract necessary details (e.g., station name, address, fuel prices, and geographical coordinates).
+
+    Data Processing:
+        From the list of retrieved gas stations, calculate the distances to the user's provided location. Use geospatial calculations to find the 10 nearest stations.
+        Sort these 10 stations by fuel price to find the station offering the lowest price.
+
+    Bot Response:
+        Format a message detailing the gas station with the lowest price, including its name, address, price, and a URL to Google Maps for directions. The message should be concise, yet informative, allowing the user to quickly grasp the essential details.
+
+    Error Handling:
+        Implement error handling for situations such as failed API requests, parsing errors, or when no gas stations are found within a reasonable distance. Provide helpful feedback to the user in these cases.
+
+    Optimizations and Enhancements:
+        Ensure the code is optimized for efficiency, particularly in handling and processing the data from the API.
+        Include comments for major sections of the code, explaining the purpose and logic behind each part to aid in future maintenance or expansion.
+
+The focus of this task is to produce clean, efficient, and readable code that adheres to Pythonic principles. 
+
+---
+
+Can you use geopy instead of creating your own tool?
+
+---
+
+Could you test the endpoint and analyse the response? I think maybe the data structure of the json returned could not fit with actual code.
+
+---
+
+Nice, I think the data retrieving is working well, but based in your findings I think we should have to modify @data_processing.py and @geospatial_utils.py , can you do it?
+
+---
+
+Could you search the solution in the docs @Python Telegram Bot ?
+
+---
+
+But we're using version 20.8
+
+---
+
+t.me/gasolinera_barata_bot
+
+---
+
+40.416775 -3.703790
